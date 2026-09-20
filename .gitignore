@@ -216,9 +216,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
 # Project data
 data/*.csv
+!data/test_papers.csv
 
 # Generated model artifacts
 models/*.npz
 models/*.npy
+
+# MLflow
+mlflow.db
+mlruns/
+
