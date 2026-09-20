@@ -1,0 +1,591 @@
+terms,titles,abstracts,title length,abstract length,text
+"['stat.ML', 'cs.CV', 'cs.LG', 'physics.comp-ph']",GAN-based Priors for Quantifying Uncertainty,"Bayesian inference is used extensively to quantify the uncertainty in an
+inferred field given the measurement of a related field when the two are linked
+by a mathematical model. Despite its many applications, Bayesian inference
+faces challenges when inferring fields that have discrete representations of
+large dimension, and/or have prior distributions that are difficult to
+characterize mathematically. In this work we demonstrate how the approximate
+distribution learned by a deep generative adversarial network (GAN) may be used
+as a prior in a Bayesian update to address both these challenges. We
+demonstrate the efficacy of this approach on two distinct, and remarkably
+broad, classes of problems. The first class leads to supervised learning
+algorithms for image classification with superior out of distribution detection
+and accuracy, and for image inpainting with built-in variance estimation. The
+second class leads to unsupervised learning algorithms for image denoising and
+for solving physics-driven inverse problems.",5,149,"GAN-based Priors for Quantifying Uncertainty Bayesian inference is used extensively to quantify the uncertainty in an
+inferred field given the measurement of a related field when the two are linked
+by a mathematical model. Despite its many applications, Bayesian inference
+faces challenges when inferring fields that have discrete representations of
+large dimension, and/or have prior distributions that are difficult to
+characterize mathematically. In this work we demonstrate how the approximate
+distribution learned by a deep generative adversarial network (GAN) may be used
+as a prior in a Bayesian update to address both these challenges. We
+demonstrate the efficacy of this approach on two distinct, and remarkably
+broad, classes of problems. The first class leads to supervised learning
+algorithms for image classification with superior out of distribution detection
+and accuracy, and for image inpainting with built-in variance estimation. The
+second class leads to unsupervised learning algorithms for image denoising and
+for solving physics-driven inverse problems."
+"['cs.LG', 'stat.ML']",Bidirectional Conditional Generative Adversarial Networks,"Conditional Generative Adversarial Networks (cGANs) are generative models
+that can produce data samples ($x$) conditioned on both latent variables ($z$)
+and known auxiliary information ($c$). We propose the Bidirectional cGAN
+(BiCoGAN), which effectively disentangles $z$ and $c$ in the generation process
+and provides an encoder that learns inverse mappings from $x$ to both $z$ and
+$c$, trained jointly with the generator and the discriminator. We present
+crucial techniques for training BiCoGANs, which involve an extrinsic factor
+loss along with an associated dynamically-tuned importance weight. As compared
+to other encoder-based cGANs, BiCoGANs encode $c$ more accurately, and utilize
+$z$ and $c$ more effectively and in a more disentangled way to generate
+samples.",5,111,"Bidirectional Conditional Generative Adversarial Networks Conditional Generative Adversarial Networks (cGANs) are generative models
+that can produce data samples ($x$) conditioned on both latent variables ($z$)
+and known auxiliary information ($c$). We propose the Bidirectional cGAN
+(BiCoGAN), which effectively disentangles $z$ and $c$ in the generation process
+and provides an encoder that learns inverse mappings from $x$ to both $z$ and
+$c$, trained jointly with the generator and the discriminator. We present
+crucial techniques for training BiCoGANs, which involve an extrinsic factor
+loss along with an associated dynamically-tuned importance weight. As compared
+to other encoder-based cGANs, BiCoGANs encode $c$ more accurately, and utilize
+$z$ and $c$ more effectively and in a more disentangled way to generate
+samples."
+"['cs.LG', 'cs.AI', 'stat.ML']",Meta Reinforcement Learning with Distribution of Exploration Parameters Learned by Evolution Strategies,"In this paper, we propose a novel meta-learning method in a reinforcement
+learning setting, based on evolution strategies (ES), exploration in parameter
+space and deterministic policy gradients. ES methods are easy to parallelize,
+which is desirable for modern training architectures; however, such methods
+typically require a huge number of samples for effective training. We use
+deterministic policy gradients during adaptation and other techniques to
+compensate for the sample-efficiency problem while maintaining the inherent
+scalability of ES methods. We demonstrate that our method achieves good results
+compared to gradient-based meta-learning in high-dimensional control tasks in
+the MuJoCo simulator. In addition, because of gradient-free methods in the
+meta-training phase, which do not need information about gradients and policies
+in adaptation training, we predict and confirm our algorithm performs better in
+tasks that need multi-step adaptation.",12,133,"Meta Reinforcement Learning with Distribution of Exploration Parameters Learned by Evolution Strategies In this paper, we propose a novel meta-learning method in a reinforcement
+learning setting, based on evolution strategies (ES), exploration in parameter
+space and deterministic policy gradients. ES methods are easy to parallelize,
+which is desirable for modern training architectures; however, such methods
+typically require a huge number of samples for effective training. We use
+deterministic policy gradients during adaptation and other techniques to
+compensate for the sample-efficiency problem while maintaining the inherent
+scalability of ES methods. We demonstrate that our method achieves good results
+compared to gradient-based meta-learning in high-dimensional control tasks in
+the MuJoCo simulator. In addition, because of gradient-free methods in the
+meta-training phase, which do not need information about gradients and policies
+in adaptation training, we predict and confirm our algorithm performs better in
+tasks that need multi-step adaptation."
+"['cs.CV', 'cs.LG', 'cs.RO', 'eess.IV', 'stat.ML']",xYOLO: A Model For Real-Time Object Detection In Humanoid Soccer On Low-End Hardware,"With the emergence of onboard vision processing for areas such as the
+internet of things (IoT), edge computing and autonomous robots, there is
+increasing demand for computationally efficient convolutional neural network
+(CNN) models to perform real-time object detection on resource constraints
+hardware devices. Tiny-YOLO is generally considered as one of the faster object
+detectors for low-end devices and is the basis for our work. Our experiments on
+this network have shown that Tiny-YOLO can achieve 0.14 frames per second(FPS)
+on the Raspberry Pi 3 B, which is too slow for soccer playing autonomous
+humanoid robots detecting goal and ball objects. In this paper we propose an
+adaptation to the YOLO CNN model named xYOLO, that can achieve object detection
+at a speed of 9.66 FPS on the Raspberry Pi 3 B. This is achieved by trading an
+acceptable amount of accuracy, making the network approximately 70 times faster
+than Tiny-YOLO. Greater inference speed-ups were also achieved on a desktop CPU
+and GPU. Additionally we contribute an annotated Darknet dataset for goal and
+ball detection.",13,174,"xYOLO: A Model For Real-Time Object Detection In Humanoid Soccer On Low-End Hardware With the emergence of onboard vision processing for areas such as the
+internet of things (IoT), edge computing and autonomous robots, there is
+increasing demand for computationally efficient convolutional neural network
+(CNN) models to perform real-time object detection on resource constraints
+hardware devices. Tiny-YOLO is generally considered as one of the faster object
+detectors for low-end devices and is the basis for our work. Our experiments on
+this network have shown that Tiny-YOLO can achieve 0.14 frames per second(FPS)
+on the Raspberry Pi 3 B, which is too slow for soccer playing autonomous
+humanoid robots detecting goal and ball objects. In this paper we propose an
+adaptation to the YOLO CNN model named xYOLO, that can achieve object detection
+at a speed of 9.66 FPS on the Raspberry Pi 3 B. This is achieved by trading an
+acceptable amount of accuracy, making the network approximately 70 times faster
+than Tiny-YOLO. Greater inference speed-ups were also achieved on a desktop CPU
+and GPU. Additionally we contribute an annotated Darknet dataset for goal and
+ball detection."
+"['cs.CV', 'cs.LG']",ContraGAN: Contrastive Learning for Conditional Image Generation,"Conditional image generation is the task of generating diverse images using
+class label information. Although many conditional Generative Adversarial
+Networks (GAN) have shown realistic results, such methods consider pairwise
+relations between the embedding of an image and the embedding of the
+corresponding label (data-to-class relations) as the conditioning losses. In
+this paper, we propose ContraGAN that considers relations between multiple
+image embeddings in the same batch (data-to-data relations) as well as the
+data-to-class relations by using a conditional contrastive loss. The
+discriminator of ContraGAN discriminates the authenticity of given samples and
+minimizes a contrastive objective to learn the relations between training
+images. Simultaneously, the generator tries to generate realistic images that
+deceive the authenticity and have a low contrastive loss. The experimental
+results show that ContraGAN outperforms state-of-the-art-models by 7.3% and
+7.7% on Tiny ImageNet and ImageNet datasets, respectively. Besides, we
+experimentally demonstrate that contrastive learning helps to relieve the
+overfitting of the discriminator. For a fair comparison, we re-implement twelve
+state-of-the-art GANs using the PyTorch library. The software package is
+available at https://github.com/POSTECH-CVLab/PyTorch-StudioGAN.",7,174,"ContraGAN: Contrastive Learning for Conditional Image Generation Conditional image generation is the task of generating diverse images using
+class label information. Although many conditional Generative Adversarial
+Networks (GAN) have shown realistic results, such methods consider pairwise
+relations between the embedding of an image and the embedding of the
+corresponding label (data-to-class relations) as the conditioning losses. In
+this paper, we propose ContraGAN that considers relations between multiple
+image embeddings in the same batch (data-to-data relations) as well as the
+data-to-class relations by using a conditional contrastive loss. The
+discriminator of ContraGAN discriminates the authenticity of given samples and
+minimizes a contrastive objective to learn the relations between training
+images. Simultaneously, the generator tries to generate realistic images that
+deceive the authenticity and have a low contrastive loss. The experimental
+results show that ContraGAN outperforms state-of-the-art-models by 7.3% and
+7.7% on Tiny ImageNet and ImageNet datasets, respectively. Besides, we
+experimentally demonstrate that contrastive learning helps to relieve the
+overfitting of the discriminator. For a fair comparison, we re-implement twelve
+state-of-the-art GANs using the PyTorch library. The software package is
+available at https://github.com/POSTECH-CVLab/PyTorch-StudioGAN."
+"['cs.LG', 'stat.ML']",Neural Ordinary Differential Equation based Recurrent Neural Network Model,"Neural differential equations are a promising new member in the neural
+network family. They show the potential of differential equations for time
+series data analysis. In this paper, the strength of the ordinary differential
+equation (ODE) is explored with a new extension. The main goal of this work is
+to answer the following questions: (i)~can ODE be used to redefine the existing
+neural network model? (ii)~can Neural ODEs solve the irregular sampling rate
+challenge of existing neural network models for a continuous time series, i.e.,
+length and dynamic nature, (iii)~how to reduce the training and evaluation time
+of existing Neural ODE systems? This work leverages the mathematical foundation
+of ODEs to redesign traditional RNNs such as Long Short-Term Memory (LSTM) and
+Gated Recurrent Unit (GRU). The main contribution of this paper is to
+illustrate the design of two new ODE-based RNN models (GRU-ODE model and
+LSTM-ODE) which can compute the hidden state and cell state at any point of
+time using an ODE solver. These models reduce the computation overhead of
+hidden state and cell state by a vast amount. The performance evaluation of
+these two new models for learning continuous time series with irregular
+sampling rate is then demonstrated. Experiments show that these new ODE based
+RNN models require less training time than Latent ODEs and conventional Neural
+ODEs. They can achieve higher accuracy quickly, and the design of the neural
+network is simpler than, previous neural ODE systems.",9,240,"Neural Ordinary Differential Equation based Recurrent Neural Network Model Neural differential equations are a promising new member in the neural
+network family. They show the potential of differential equations for time
+series data analysis. In this paper, the strength of the ordinary differential
+equation (ODE) is explored with a new extension. The main goal of this work is
+to answer the following questions: (i)~can ODE be used to redefine the existing
+neural network model? (ii)~can Neural ODEs solve the irregular sampling rate
+challenge of existing neural network models for a continuous time series, i.e.,
+length and dynamic nature, (iii)~how to reduce the training and evaluation time
+of existing Neural ODE systems? This work leverages the mathematical foundation
+of ODEs to redesign traditional RNNs such as Long Short-Term Memory (LSTM) and
+Gated Recurrent Unit (GRU). The main contribution of this paper is to
+illustrate the design of two new ODE-based RNN models (GRU-ODE model and
+LSTM-ODE) which can compute the hidden state and cell state at any point of
+time using an ODE solver. These models reduce the computation overhead of
+hidden state and cell state by a vast amount. The performance evaluation of
+these two new models for learning continuous time series with irregular
+sampling rate is then demonstrated. Experiments show that these new ODE based
+RNN models require less training time than Latent ODEs and conventional Neural
+ODEs. They can achieve higher accuracy quickly, and the design of the neural
+network is simpler than, previous neural ODE systems."
+"['cs.LG', 'math.OC', 'stat.ML']",Neural Network Compression Via Sparse Optimization,"The compression of deep neural networks (DNNs) to reduce inference cost
+becomes increasingly important to meet realistic deployment requirements of
+various applications. There have been a significant amount of work regarding
+network compression, while most of them are heuristic rule-based or typically
+not friendly to be incorporated into varying scenarios. On the other hand,
+sparse optimization yielding sparse solutions naturally fits the compression
+requirement, but due to the limited study of sparse optimization in stochastic
+learning, its extension and application onto model compression is rarely well
+explored. In this work, we propose a model compression framework based on the
+recent progress on sparse stochastic optimization. Compared to existing model
+compression techniques, our method is effective and requires fewer extra
+engineering efforts to incorporate with varying applications, and has been
+numerically demonstrated on benchmark compression tasks. Particularly, we
+achieve up to 7.2 and 2.9 times FLOPs reduction with the same level of
+evaluation accuracy on VGG16 for CIFAR10 and ResNet50 for ImageNet compared to
+the baseline heavy models, respectively.",6,168,"Neural Network Compression Via Sparse Optimization The compression of deep neural networks (DNNs) to reduce inference cost
+becomes increasingly important to meet realistic deployment requirements of
+various applications. There have been a significant amount of work regarding
+network compression, while most of them are heuristic rule-based or typically
+not friendly to be incorporated into varying scenarios. On the other hand,
+sparse optimization yielding sparse solutions naturally fits the compression
+requirement, but due to the limited study of sparse optimization in stochastic
+learning, its extension and application onto model compression is rarely well
+explored. In this work, we propose a model compression framework based on the
+recent progress on sparse stochastic optimization. Compared to existing model
+compression techniques, our method is effective and requires fewer extra
+engineering efforts to incorporate with varying applications, and has been
+numerically demonstrated on benchmark compression tasks. Particularly, we
+achieve up to 7.2 and 2.9 times FLOPs reduction with the same level of
+evaluation accuracy on VGG16 for CIFAR10 and ResNet50 for ImageNet compared to
+the baseline heavy models, respectively."
+['cs.CV'],Measuring Human and Economic Activity from Satellite Imagery to Support City-Scale Decision-Making during COVID-19 Pandemic,"The COVID-19 outbreak forced governments worldwide to impose lockdowns and
+quarantines to prevent virus transmission. As a consequence, there are
+disruptions in human and economic activities all over the globe. The recovery
+process is also expected to be rough. Economic activities impact social
+behaviors, which leave signatures in satellite images that can be automatically
+detected and classified. Satellite imagery can support the decision-making of
+analysts and policymakers by providing a different kind of visibility into the
+unfolding economic changes. In this work, we use a deep learning approach that
+combines strategic location sampling and an ensemble of lightweight
+convolutional neural networks (CNNs) to recognize specific elements in
+satellite images that could be used to compute economic indicators based on it,
+automatically. This CNN ensemble framework ranked third place in the US
+Department of Defense xView challenge, the most advanced benchmark for object
+detection in satellite images. We show the potential of our framework for
+temporal analysis using the US IARPA Function Map of the World (fMoW) dataset.
+We also show results on real examples of different sites before and after the
+COVID-19 outbreak to illustrate different measurable indicators. Our code and
+annotated high-resolution aerial scenes before and after the outbreak are
+available on GitHub (https://github.com/maups/covid19-satellite-analysis).",15,205,"Measuring Human and Economic Activity from Satellite Imagery to Support City-Scale Decision-Making during COVID-19 Pandemic The COVID-19 outbreak forced governments worldwide to impose lockdowns and
+quarantines to prevent virus transmission. As a consequence, there are
+disruptions in human and economic activities all over the globe. The recovery
+process is also expected to be rough. Economic activities impact social
+behaviors, which leave signatures in satellite images that can be automatically
+detected and classified. Satellite imagery can support the decision-making of
+analysts and policymakers by providing a different kind of visibility into the
+unfolding economic changes. In this work, we use a deep learning approach that
+combines strategic location sampling and an ensemble of lightweight
+convolutional neural networks (CNNs) to recognize specific elements in
+satellite images that could be used to compute economic indicators based on it,
+automatically. This CNN ensemble framework ranked third place in the US
+Department of Defense xView challenge, the most advanced benchmark for object
+detection in satellite images. We show the potential of our framework for
+temporal analysis using the US IARPA Function Map of the World (fMoW) dataset.
+We also show results on real examples of different sites before and after the
+COVID-19 outbreak to illustrate different measurable indicators. Our code and
+annotated high-resolution aerial scenes before and after the outbreak are
+available on GitHub (https://github.com/maups/covid19-satellite-analysis)."
+['cs.CV'],Track and Transfer: Watching Videos to Simulate Strong Human Supervision for Weakly-Supervised Object Detection,"The status quo approach to training object detectors requires expensive
+bounding box annotations. Our framework takes a markedly different direction:
+we transfer tracked object boxes from weakly-labeled videos to weakly-labeled
+images to automatically generate pseudo ground-truth boxes, which replace
+manually annotated bounding boxes. We first mine discriminative regions in the
+weakly-labeled image collection that frequently/rarely appear in the
+positive/negative images. We then match those regions to videos and retrieve
+the corresponding tracked object boxes. Finally, we design a hough transform
+algorithm to vote for the best box to serve as the pseudo GT for each image,
+and use them to train an object detector. Together, these lead to
+state-of-the-art weakly-supervised detection results on the PASCAL 2007 and
+2010 datasets.",14,119,"Track and Transfer: Watching Videos to Simulate Strong Human Supervision for Weakly-Supervised Object Detection The status quo approach to training object detectors requires expensive
+bounding box annotations. Our framework takes a markedly different direction:
+we transfer tracked object boxes from weakly-labeled videos to weakly-labeled
+images to automatically generate pseudo ground-truth boxes, which replace
+manually annotated bounding boxes. We first mine discriminative regions in the
+weakly-labeled image collection that frequently/rarely appear in the
+positive/negative images. We then match those regions to videos and retrieve
+the corresponding tracked object boxes. Finally, we design a hough transform
+algorithm to vote for the best box to serve as the pseudo GT for each image,
+and use them to train an object detector. Together, these lead to
+state-of-the-art weakly-supervised detection results on the PASCAL 2007 and
+2010 datasets."
+['cs.CV'],Learning Predicates as Functions to Enable Few-shot Scene Graph Prediction,"Scene graph prediction --- classifying the set of objects and predicates in a
+visual scene --- requires substantial training data. However, most predicates
+only occur a handful of times making them difficult to learn. We introduce the
+first scene graph prediction model that supports few-shot learning of
+predicates. Existing scene graph generation models represent objects using
+pretrained object detectors or word embeddings that capture semantic object
+information at the cost of encoding information about which relationships they
+afford. So, these object representations are unable to generalize to new
+few-shot relationships. We introduce a framework that induces object
+representations that are structured according to their visual relationships.
+Unlike past methods, our framework embeds objects that afford similar
+relationships closer together. This property allows our model to perform well
+in the few-shot setting. For example, applying the 'riding' predicate
+transformation to 'person' modifies the representation towards objects like
+'skateboard' and 'horse' that enable riding. We generate object representations
+by learning predicates trained as message passing functions within a new graph
+convolution framework. The object representations are used to build few-shot
+predicate classifiers for rare predicates with as few as 1 labeled example. We
+achieve a 5-shot performance of 22.70 recall@50, a 3.7 increase when compared
+to strong transfer learning baselines.",10,208,"Learning Predicates as Functions to Enable Few-shot Scene Graph Prediction Scene graph prediction --- classifying the set of objects and predicates in a
+visual scene --- requires substantial training data. However, most predicates
+only occur a handful of times making them difficult to learn. We introduce the
+first scene graph prediction model that supports few-shot learning of
+predicates. Existing scene graph generation models represent objects using
+pretrained object detectors or word embeddings that capture semantic object
+information at the cost of encoding information about which relationships they
+afford. So, these object representations are unable to generalize to new
+few-shot relationships. We introduce a framework that induces object
+representations that are structured according to their visual relationships.
+Unlike past methods, our framework embeds objects that afford similar
+relationships closer together. This property allows our model to perform well
+in the few-shot setting. For example, applying the 'riding' predicate
+transformation to 'person' modifies the representation towards objects like
+'skateboard' and 'horse' that enable riding. We generate object representations
+by learning predicates trained as message passing functions within a new graph
+convolution framework. The object representations are used to build few-shot
+predicate classifiers for rare predicates with as few as 1 labeled example. We
+achieve a 5-shot performance of 22.70 recall@50, a 3.7 increase when compared
+to strong transfer learning baselines."
+['cs.CV'],Learning to Generate Dense Point Clouds with Textures on Multiple Categories,"3D reconstruction from images is a core problem in computer vision. With
+recent advances in deep learning, it has become possible to recover plausible
+3D shapes even from single RGB images for the first time. However, obtaining
+detailed geometry and texture for objects with arbitrary topology remains
+challenging. In this paper, we propose a novel approach for reconstructing
+point clouds from RGB images. Unlike other methods, we can recover dense point
+clouds with hundreds of thousands of points, and we also include RGB textures.
+In addition, we train our model on multiple categories which leads to superior
+generalization to unseen categories compared to previous techniques. We achieve
+this using a two-stage approach, where we first infer an object coordinate map
+from the input RGB image, and then obtain the final point cloud using a
+reprojection and completion step. We show results on standard benchmarks that
+demonstrate the advantages of our technique. Code is available at
+https://github.com/TaoHuUMD/3D-Reconstruction.",11,156,"Learning to Generate Dense Point Clouds with Textures on Multiple Categories 3D reconstruction from images is a core problem in computer vision. With
+recent advances in deep learning, it has become possible to recover plausible
+3D shapes even from single RGB images for the first time. However, obtaining
+detailed geometry and texture for objects with arbitrary topology remains
+challenging. In this paper, we propose a novel approach for reconstructing
+point clouds from RGB images. Unlike other methods, we can recover dense point
+clouds with hundreds of thousands of points, and we also include RGB textures.
+In addition, we train our model on multiple categories which leads to superior
+generalization to unseen categories compared to previous techniques. We achieve
+this using a two-stage approach, where we first infer an object coordinate map
+from the input RGB image, and then obtain the final point cloud using a
+reprojection and completion step. We show results on standard benchmarks that
+demonstrate the advantages of our technique. Code is available at
+https://github.com/TaoHuUMD/3D-Reconstruction."
+"['stat.ML', 'cs.LG', 'math.OA']",Reproducing kernel Hilbert C*-module and kernel mean embeddings,"Kernel methods have been among the most popular techniques in machine
+learning, where learning tasks are solved using the property of reproducing
+kernel Hilbert space (RKHS). In this paper, we propose a novel data analysis
+framework with reproducing kernel Hilbert $C^*$-module (RKHM) and kernel mean
+embedding (KME) in RKHM. Since RKHM contains richer information than RKHS or
+vector-valued RKHS (vv RKHS), analysis with RKHM enables us to capture and
+extract structural properties in multivariate data, functional data and other
+structured data. We show a branch of theories for RKHM to apply to data
+analysis, including the representer theorem, and the injectivity and
+universality of the proposed KME. We also show RKHM generalizes RKHS and vv
+RKHS. Then, we provide concrete procedures for employing RKHM and the proposed
+KME to data analysis.",8,131,"Reproducing kernel Hilbert C*-module and kernel mean embeddings Kernel methods have been among the most popular techniques in machine
+learning, where learning tasks are solved using the property of reproducing
+kernel Hilbert space (RKHS). In this paper, we propose a novel data analysis
+framework with reproducing kernel Hilbert $C^*$-module (RKHM) and kernel mean
+embedding (KME) in RKHM. Since RKHM contains richer information than RKHS or
+vector-valued RKHS (vv RKHS), analysis with RKHM enables us to capture and
+extract structural properties in multivariate data, functional data and other
+structured data. We show a branch of theories for RKHM to apply to data
+analysis, including the representer theorem, and the injectivity and
+universality of the proposed KME. We also show RKHM generalizes RKHS and vv
+RKHS. Then, we provide concrete procedures for employing RKHM and the proposed
+KME to data analysis."
+['cs.CV'],Skin Lesion Segmentation Using Atrous Convolution via DeepLab v3,"As melanoma diagnoses increase across the US, automated efforts to identify
+malignant lesions become increasingly of interest to the research community.
+Segmentation of dermoscopic images is the first step in this process, thus
+accuracy is crucial. Although techniques utilizing convolutional neural
+networks have been used in the past for lesion segmentation, we present a
+solution employing the recently published DeepLab 3, an atrous convolution
+method for image segmentation. Although the results produced by this run are
+not ideal, with a mean Jaccard index of 0.498, we believe that with further
+adjustments and modifications to the compatibility with the DeepLab code and
+with training on more powerful processing units, this method may achieve better
+results in future trials.",9,117,"Skin Lesion Segmentation Using Atrous Convolution via DeepLab v3 As melanoma diagnoses increase across the US, automated efforts to identify
+malignant lesions become increasingly of interest to the research community.
+Segmentation of dermoscopic images is the first step in this process, thus
+accuracy is crucial. Although techniques utilizing convolutional neural
+networks have been used in the past for lesion segmentation, we present a
+solution employing the recently published DeepLab 3, an atrous convolution
+method for image segmentation. Although the results produced by this run are
+not ideal, with a mean Jaccard index of 0.498, we believe that with further
+adjustments and modifications to the compatibility with the DeepLab code and
+with training on more powerful processing units, this method may achieve better
+results in future trials."
+"['cs.LG', 'stat.ML']",Deep Reinforcement Learning,"We discuss deep reinforcement learning in an overview style. We draw a big
+picture, filled with details. We discuss six core elements, six important
+mechanisms, and twelve applications, focusing on contemporary work, and in
+historical contexts. We start with background of artificial intelligence,
+machine learning, deep learning, and reinforcement learning (RL), with
+resources. Next we discuss RL core elements, including value function, policy,
+reward, model, exploration vs. exploitation, and representation. Then we
+discuss important mechanisms for RL, including attention and memory,
+unsupervised learning, hierarchical RL, multi-agent RL, relational RL, and
+learning to learn. After that, we discuss RL applications, including games,
+robotics, natural language processing (NLP), computer vision, finance, business
+management, healthcare, education, energy, transportation, computer systems,
+and, science, engineering, and art. Finally we summarize briefly, discuss
+challenges and opportunities, and close with an epilogue.",3,135,"Deep Reinforcement Learning We discuss deep reinforcement learning in an overview style. We draw a big
+picture, filled with details. We discuss six core elements, six important
+mechanisms, and twelve applications, focusing on contemporary work, and in
+historical contexts. We start with background of artificial intelligence,
+machine learning, deep learning, and reinforcement learning (RL), with
+resources. Next we discuss RL core elements, including value function, policy,
+reward, model, exploration vs. exploitation, and representation. Then we
+discuss important mechanisms for RL, including attention and memory,
+unsupervised learning, hierarchical RL, multi-agent RL, relational RL, and
+learning to learn. After that, we discuss RL applications, including games,
+robotics, natural language processing (NLP), computer vision, finance, business
+management, healthcare, education, energy, transportation, computer systems,
+and, science, engineering, and art. Finally we summarize briefly, discuss
+challenges and opportunities, and close with an epilogue."
+"['cs.LG', 'stat.ML']",Hierarchical Message-Passing Graph Neural Networks,"Graph Neural Networks (GNNs) have become a promising approach to machine
+learning with graphs. Since existing GNN models are based on flat
+message-passing mechanisms, two limitations need to be tackled. One is costly
+in encoding global information on the graph topology. The other is failing to
+model meso- and macro-level semantics hidden in the graph, such as the
+knowledge of institutes and research areas in an academic collaboration
+network. To deal with these two issues, we propose a novel Hierarchical
+Message-Passing Graph Neural Networks framework. The main idea is to generate a
+hierarchical structure that re-organises all nodes in a graph into multi-level
+clusters, along with intra- and inter-level edge connections. The derived
+hierarchy not only creates shortcuts connecting far-away nodes so that global
+information can be efficiently accessed via message passing but also
+incorporates meso- and macro-level semantics into the learning of node
+embedding. We present the first model to implement this hierarchical
+message-passing mechanism, termed Hierarchical Community-aware Graph Neural
+Network (HC-GNN), based on hierarchical communities detected from the graph.
+Experiments conducted on eight datasets under transductive, inductive, and
+few-shot settings exhibit that HC-GNN can outperform state-of-the-art GNN
+models in network analysis tasks, including node classification, link
+prediction, and community detection.",5,202,"Hierarchical Message-Passing Graph Neural Networks Graph Neural Networks (GNNs) have become a promising approach to machine
+learning with graphs. Since existing GNN models are based on flat
+message-passing mechanisms, two limitations need to be tackled. One is costly
+in encoding global information on the graph topology. The other is failing to
+model meso- and macro-level semantics hidden in the graph, such as the
+knowledge of institutes and research areas in an academic collaboration
+network. To deal with these two issues, we propose a novel Hierarchical
+Message-Passing Graph Neural Networks framework. The main idea is to generate a
+hierarchical structure that re-organises all nodes in a graph into multi-level
+clusters, along with intra- and inter-level edge connections. The derived
+hierarchy not only creates shortcuts connecting far-away nodes so that global
+information can be efficiently accessed via message passing but also
+incorporates meso- and macro-level semantics into the learning of node
+embedding. We present the first model to implement this hierarchical
+message-passing mechanism, termed Hierarchical Community-aware Graph Neural
+Network (HC-GNN), based on hierarchical communities detected from the graph.
+Experiments conducted on eight datasets under transductive, inductive, and
+few-shot settings exhibit that HC-GNN can outperform state-of-the-art GNN
+models in network analysis tasks, including node classification, link
+prediction, and community detection."
+"['cs.CV', 'cs.CR']",MIPGAN -- Generating Strong and High Quality Morphing Attacks Using Identity Prior Driven GAN,"Face morphing attacks target to circumvent Face Recognition Systems (FRS) by
+employing face images derived from multiple data subjects (e.g., accomplices
+and malicious actors). Morphed images can be verified against contributing data
+subjects with a reasonable success rate, given they have a high degree of
+facial resemblance. The success of morphing attacks is directly dependent on
+the quality of the generated morph images. We present a new approach for
+generating strong attacks extending our earlier framework for generating face
+morphs. We present a new approach using an Identity Prior Driven Generative
+Adversarial Network, which we refer to as MIPGAN (Morphing through Identity
+Prior driven GAN). The proposed MIPGAN is derived from the StyleGAN with a
+newly formulated loss function exploiting perceptual quality and identity
+factor to generate a high quality morphed facial image with minimal artefacts
+and with high resolution. We demonstrate the proposed approach's applicability
+to generate strong morphing attacks by evaluating its vulnerability against
+both commercial and deep learning based Face Recognition System (FRS) and
+demonstrate the success rate of attacks. Extensive experiments are carried out
+to assess the FRS's vulnerability against the proposed morphed face generation
+technique on three types of data such as digital images, re-digitized (printed
+and scanned) images, and compressed images after re-digitization from newly
+generated MIPGAN Face Morph Dataset. The obtained results demonstrate that the
+proposed approach of morph generation poses a high threat to FRS.",14,233,"MIPGAN -- Generating Strong and High Quality Morphing Attacks Using Identity Prior Driven GAN Face morphing attacks target to circumvent Face Recognition Systems (FRS) by
+employing face images derived from multiple data subjects (e.g., accomplices
+and malicious actors). Morphed images can be verified against contributing data
+subjects with a reasonable success rate, given they have a high degree of
+facial resemblance. The success of morphing attacks is directly dependent on
+the quality of the generated morph images. We present a new approach for
+generating strong attacks extending our earlier framework for generating face
+morphs. We present a new approach using an Identity Prior Driven Generative
+Adversarial Network, which we refer to as MIPGAN (Morphing through Identity
+Prior driven GAN). The proposed MIPGAN is derived from the StyleGAN with a
+newly formulated loss function exploiting perceptual quality and identity
+factor to generate a high quality morphed facial image with minimal artefacts
+and with high resolution. We demonstrate the proposed approach's applicability
+to generate strong morphing attacks by evaluating its vulnerability against
+both commercial and deep learning based Face Recognition System (FRS) and
+demonstrate the success rate of attacks. Extensive experiments are carried out
+to assess the FRS's vulnerability against the proposed morphed face generation
+technique on three types of data such as digital images, re-digitized (printed
+and scanned) images, and compressed images after re-digitization from newly
+generated MIPGAN Face Morph Dataset. The obtained results demonstrate that the
+proposed approach of morph generation poses a high threat to FRS."
+"['stat.ML', 'cs.LG']",Likelihood Assignment for Out-of-Distribution Inputs in Deep Generative Models is Sensitive to Prior Distribution Choice,"Recent work has shown that deep generative models assign higher likelihood to
+out-of-distribution inputs than to training data. We show that a factor
+underlying this phenomenon is a mismatch between the nature of the prior
+distribution and that of the data distribution, a problem found in widely used
+deep generative models such as VAEs and Glow. While a typical choice for a
+prior distribution is a standard Gaussian distribution, properties of
+distributions of real data sets may not be consistent with a unimodal prior
+distribution. This paper focuses on the relationship between the choice of a
+prior distribution and the likelihoods assigned to out-of-distribution inputs.
+We propose the use of a mixture distribution as a prior to make likelihoods
+assigned by deep generative models sensitive to out-of-distribution inputs.
+Furthermore, we explain the theoretical advantages of adopting a mixture
+distribution as the prior, and we present experimental results to support our
+claims. Finally, we demonstrate that a mixture prior lowers the
+out-of-distribution likelihood with respect to two pairs of real image data
+sets: Fashion-MNIST vs. MNIST and CIFAR10 vs. SVHN.",15,179,"Likelihood Assignment for Out-of-Distribution Inputs in Deep Generative Models is Sensitive to Prior Distribution Choice Recent work has shown that deep generative models assign higher likelihood to
+out-of-distribution inputs than to training data. We show that a factor
+underlying this phenomenon is a mismatch between the nature of the prior
+distribution and that of the data distribution, a problem found in widely used
+deep generative models such as VAEs and Glow. While a typical choice for a
+prior distribution is a standard Gaussian distribution, properties of
+distributions of real data sets may not be consistent with a unimodal prior
+distribution. This paper focuses on the relationship between the choice of a
+prior distribution and the likelihoods assigned to out-of-distribution inputs.
+We propose the use of a mixture distribution as a prior to make likelihoods
+assigned by deep generative models sensitive to out-of-distribution inputs.
+Furthermore, we explain the theoretical advantages of adopting a mixture
+distribution as the prior, and we present experimental results to support our
+claims. Finally, we demonstrate that a mixture prior lowers the
+out-of-distribution likelihood with respect to two pairs of real image data
+sets: Fashion-MNIST vs. MNIST and CIFAR10 vs. SVHN."
+['cs.CV'],Geometric Attention for Prediction of Differential Properties in 3D Point Clouds,"Estimation of differential geometric quantities in discrete 3D data
+representations is one of the crucial steps in the geometry processing
+pipeline. Specifically, estimating normals and sharp feature lines from raw
+point cloud helps improve meshing quality and allows us to use more precise
+surface reconstruction techniques. When designing a learnable approach to such
+problems, the main difficulty is selecting neighborhoods in a point cloud and
+incorporating geometric relations between the points. In this study, we present
+a geometric attention mechanism that can provide such properties in a learnable
+fashion. We establish the usefulness of the proposed technique with several
+experiments on the prediction of normal vectors and the extraction of feature
+lines.",11,112,"Geometric Attention for Prediction of Differential Properties in 3D Point Clouds Estimation of differential geometric quantities in discrete 3D data
+representations is one of the crucial steps in the geometry processing
+pipeline. Specifically, estimating normals and sharp feature lines from raw
+point cloud helps improve meshing quality and allows us to use more precise
+surface reconstruction techniques. When designing a learnable approach to such
+problems, the main difficulty is selecting neighborhoods in a point cloud and
+incorporating geometric relations between the points. In this study, we present
+a geometric attention mechanism that can provide such properties in a learnable
+fashion. We establish the usefulness of the proposed technique with several
+experiments on the prediction of normal vectors and the extraction of feature
+lines."
+"['cs.CV', 'cs.LG', '68T01']",Guided Image Generation with Conditional Invertible Neural Networks,"In this work, we address the task of natural image generation guided by a
+conditioning input. We introduce a new architecture called conditional
+invertible neural network (cINN). The cINN combines the purely generative INN
+model with an unconstrained feed-forward network, which efficiently
+preprocesses the conditioning input into useful features. All parameters of the
+cINN are jointly optimized with a stable, maximum likelihood-based training
+procedure. By construction, the cINN does not experience mode collapse and
+generates diverse samples, in contrast to e.g. cGANs. At the same time our
+model produces sharp images since no reconstruction loss is required, in
+contrast to e.g. VAEs. We demonstrate these properties for the tasks of MNIST
+digit generation and image colorization. Furthermore, we take advantage of our
+bi-directional cINN architecture to explore and manipulate emergent properties
+of the latent space, such as changing the image style in an intuitive way.",8,145,"Guided Image Generation with Conditional Invertible Neural Networks In this work, we address the task of natural image generation guided by a
+conditioning input. We introduce a new architecture called conditional
+invertible neural network (cINN). The cINN combines the purely generative INN
+model with an unconstrained feed-forward network, which efficiently
+preprocesses the conditioning input into useful features. All parameters of the
+cINN are jointly optimized with a stable, maximum likelihood-based training
+procedure. By construction, the cINN does not experience mode collapse and
+generates diverse samples, in contrast to e.g. cGANs. At the same time our
+model produces sharp images since no reconstruction loss is required, in
+contrast to e.g. VAEs. We demonstrate these properties for the tasks of MNIST
+digit generation and image colorization. Furthermore, we take advantage of our
+bi-directional cINN architecture to explore and manipulate emergent properties
+of the latent space, such as changing the image style in an intuitive way."
+['cs.CV'],SID: Incremental Learning for Anchor-Free Object Detection via Selective and Inter-Related Distillation,"Incremental learning requires a model to continually learn new tasks from
+streaming data. However, traditional fine-tuning of a well-trained deep neural
+network on a new task will dramatically degrade performance on the old task --
+a problem known as catastrophic forgetting. In this paper, we address this
+issue in the context of anchor-free object detection, which is a new trend in
+computer vision as it is simple, fast, and flexible. Simply adapting current
+incremental learning strategies fails on these anchor-free detectors due to
+lack of consideration of their specific model structures. To deal with the
+challenges of incremental learning on anchor-free object detectors, we propose
+a novel incremental learning paradigm called Selective and Inter-related
+Distillation (SID). In addition, a novel evaluation metric is proposed to
+better assess the performance of detectors under incremental learning
+conditions. By selective distilling at the proper locations and further
+transferring additional instance relation knowledge, our method demonstrates
+significant advantages on the benchmark datasets PASCAL VOC and COCO.",12,162,"SID: Incremental Learning for Anchor-Free Object Detection via Selective and Inter-Related Distillation Incremental learning requires a model to continually learn new tasks from
+streaming data. However, traditional fine-tuning of a well-trained deep neural
+network on a new task will dramatically degrade performance on the old task --
+a problem known as catastrophic forgetting. In this paper, we address this
+issue in the context of anchor-free object detection, which is a new trend in
+computer vision as it is simple, fast, and flexible. Simply adapting current
+incremental learning strategies fails on these anchor-free detectors due to
+lack of consideration of their specific model structures. To deal with the
+challenges of incremental learning on anchor-free object detectors, we propose
+a novel incremental learning paradigm called Selective and Inter-related
+Distillation (SID). In addition, a novel evaluation metric is proposed to
+better assess the performance of detectors under incremental learning
+conditions. By selective distilling at the proper locations and further
+transferring additional instance relation knowledge, our method demonstrates
+significant advantages on the benchmark datasets PASCAL VOC and COCO."
