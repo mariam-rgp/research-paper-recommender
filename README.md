@@ -1,89 +1,284 @@
-# Research Paper Recommendation System
+# 📚 Research Paper Recommendation System
 
-A content-based research paper recommendation system that recommends relevant academic papers based on their titles and abstracts.
+An end-to-end **Research Paper Recommendation System** that recommends similar research papers based on their textual content.
 
-The project compares a traditional **TF-IDF** approach with **Transformer-based semantic embeddings** to evaluate how well each method captures similarity between research papers.
+The project compares a traditional **TF-IDF** approach with **Transformer-based semantic embeddings**, evaluates their recommendation performance, and provides a complete application pipeline with **Translation, FastAPI, and Streamlit**.
 
-## Project Overview
+**MLflow** is used for experiment tracking and comparison between the TF-IDF and Transformer approaches.
 
-Finding relevant research papers can be time-consuming when dealing with large collections of academic publications.
+---
 
-This project aims to build a recommendation system that retrieves papers similar to a given paper or text query.
-
-Two approaches are implemented and compared:
-
-1. **TF-IDF + Cosine Similarity**
-2. **Transformer Embeddings + Cosine Similarity**
-
-The system is evaluated using ranking-based information retrieval metrics, and **MLflow** is used to track and compare experiments.
-
-## Dataset
-
-The project uses an arXiv research paper dataset containing paper titles, abstracts, and subject terms.
-
-After preprocessing and cleaning, the dataset contains approximately **41K research papers**.
-
-The main text used for recommendation is constructed from the paper title and abstract.
-
-> The original dataset is not included in the repository because of its size.
-
-A small `test_papers.csv` file is included for evaluation and testing purposes.
-
-## Project Pipeline
+## 🚀 Project Pipeline
 
 ```text
-Raw Research Papers
-        ↓
-Data Cleaning & Preprocessing
-        ↓
-Title + Abstract
-        ↓
- ┌───────────────────────┐
- │                       │
- ▼                       ▼
-TF-IDF              Transformer
-Vectorization       Embeddings
- │                       │
- └───────────┬───────────┘
-             ↓
-      Cosine Similarity
-             ↓
-      Top-K Recommendations
-             ↓
-         Evaluation
-             ↓
-          MLflow
+TF-IDF
+   ↓
+Transformer
+   ↓
+Evaluation
+   ↓
+Recommendation
+   ↓
+Translation
+   ↓
+FastAPI
+   ↓
+Streamlit
+   ↓
+MLflow
+   └── Experiment Tracking
+          ├── TF-IDF
+          └── Transformer
 ```
 
-## Approaches
+---
 
-### 1. TF-IDF Baseline
+## 🎯 Project Overview
 
-TF-IDF is used as a traditional text representation technique.
+Finding relevant research papers can be difficult when dealing with a large collection of academic documents.
 
-Configuration:
+This project builds a **content-based recommendation system** that recommends research papers based on their textual similarity.
 
-* `max_features = 50,000`
-* TF-IDF vectorization
-* Cosine similarity for retrieving similar papers
+Two different text representation approaches are implemented and compared:
 
-The TF-IDF approach provides a strong baseline for comparing traditional lexical similarity with semantic embeddings.
+### 1. TF-IDF
+
+A traditional lexical representation based on word importance.
 
 ### 2. Transformer Embeddings
 
-Transformer-based embeddings are generated using a Sentence Transformer model.
+A semantic representation generated using the pretrained:
 
-Model:
+```text
+all-MiniLM-L6-v2
+```
 
-`all-MiniLM-L6-v2`
+The two approaches are evaluated using ranking metrics, and the recommendation system uses similarity scores to retrieve the most relevant papers.
 
-Each research paper is represented as a **384-dimensional semantic embedding**.
+The final system also includes a **translation component**, a **FastAPI backend**, and a **Streamlit interface**.
 
-Cosine similarity is then used to identify papers with similar semantic meaning.
+---
 
-## Evaluation
+# 🗂️ Dataset
 
-The two approaches are evaluated using ranking-based metrics:
+The project uses research paper data from **arXiv Paper Abstracts**.
+
+The dataset contains information such as:
+
+* Paper titles
+* Paper abstracts
+* Terms/categories
+
+### Data preprocessing
+
+The preprocessing pipeline includes:
+
+* Handling missing values
+* Removing duplicate papers
+* Cleaning textual data
+* Combining the paper title and abstract
+* Creating text-based features
+* Preparing the data for TF-IDF and Transformer-based representations
+
+Large raw datasets and generated model artifacts are excluded from the GitHub repository.
+
+A small `test_papers.csv` file is included for testing/evaluation purposes.
+
+---
+
+# 🔄 Methodology
+
+## 1. TF-IDF Baseline
+
+The first approach uses **TF-IDF (Term Frequency-Inverse Document Frequency)**.
+
+Each research paper is converted into a numerical vector based on the importance of its words across the dataset.
+
+```text
+Paper Title + Abstract
+          ↓
+     TF-IDF Vectorizer
+          ↓
+   Numerical Representation
+          ↓
+    Cosine Similarity
+          ↓
+    Similar Papers
+```
+
+The implementation uses:
+
+```python
+TfidfVectorizer(max_features=50000)
+```
+
+TF-IDF provides a traditional lexical baseline for comparison with the semantic Transformer approach.
+
+---
+
+# 2. Transformer Embeddings
+
+The second approach uses Transformer-based sentence embeddings.
+
+The project uses:
+
+```text
+all-MiniLM-L6-v2
+```
+
+Each paper is converted into a **384-dimensional embedding**.
+
+```text
+Paper Title + Abstract
+          ↓
+   Transformer Encoder
+          ↓
+  384-dimensional Vector
+          ↓
+    Cosine Similarity
+          ↓
+    Similar Papers
+```
+
+Unlike TF-IDF, Transformer embeddings represent semantic relationships between words and sentences, allowing the system to identify papers that are conceptually related even when they do not share exactly the same words.
+
+---
+
+# 3. Evaluation
+
+The two recommendation approaches are evaluated using ranking metrics.
+
+The evaluation includes:
+
+* **Precision@10**
+* **Recall@10**
+* **NDCG@10**
+* **MRR@10**
+* **MAP@10**
+
+### Evaluation Results
+
+| Metric       |   TF-IDF | Transformer |
+| ------------ | -------: | ----------: |
+| Precision@10 |   0.9060 |      0.9480 |
+| Recall@10    | 0.000332 |    0.000349 |
+| NDCG@10      |   0.8859 |      0.8996 |
+| MRR@10       |   0.9542 |           — |
+| MAP@10       |   0.9320 |           — |
+
+The evaluation notebook contains the detailed implementation and comparison of both approaches.
+
+> The Transformer values for MRR@10 and MAP@10 are omitted here until their exact final experiment values are confirmed.
+
+---
+
+# 4. Recommendation System
+
+After generating the text representations, the system calculates similarity between papers.
+
+The recommendation workflow is:
+
+```text
+Input Paper / Query
+        ↓
+Text Representation
+        ↓
+Similarity Calculation
+        ↓
+Ranking
+        ↓
+Top-K Recommendations
+```
+
+**Cosine similarity** is used to measure the similarity between the input paper and the available research papers.
+
+The system returns the most relevant papers based on their similarity scores.
+
+---
+
+# 5. Translation
+
+A translation component is integrated into the project after the recommendation stage.
+
+```text
+Recommendation
+      ↓
+ Translation
+      ↓
+Translated Output
+```
+
+This allows the recommended paper information to be translated as part of the application workflow.
+
+The translation functionality is integrated into the overall recommendation pipeline rather than being a separate standalone project.
+
+---
+
+# 🌐 Application Layer
+
+## 6. FastAPI
+
+**FastAPI** is used as the backend API layer for the application.
+
+It connects the machine-learning/recommendation logic with the user interface.
+
+```text
+Client
+  ↓
+FastAPI
+  ↓
+Recommendation System
+  ↓
+Translation
+  ↓
+Response
+```
+
+The API provides an interface through which the recommendation functionality can be accessed programmatically.
+
+---
+
+# 7. Streamlit
+
+**Streamlit** is used to build the interactive frontend.
+
+The overall application flow is:
+
+```text
+Streamlit
+    ↓
+FastAPI
+    ↓
+Recommendation
+    ↓
+Translation
+    ↓
+Results
+```
+
+This provides a simple interface for interacting with the research paper recommendation system.
+
+---
+
+# 📊 MLflow
+
+**MLflow** is used in this project for **experiment tracking**.
+
+The main purpose of MLflow is to compare the two implemented recommendation approaches:
+
+```text
+                 MLflow
+                    ↓
+          Experiment Tracking
+             ↙            ↘
+         TF-IDF       Transformer
+```
+
+For each approach, the experiment tracks relevant parameters and evaluation metrics.
+
+### Tracked Metrics
+
+The comparison includes:
 
 * Precision@10
 * Recall@10
@@ -91,37 +286,25 @@ The two approaches are evaluated using ranking-based metrics:
 * MRR@10
 * MAP@10
 
-### Results
+The MLflow experiment is:
 
-| Metric       |   TF-IDF |  Transformer |
-| ------------ | -------: | -----------: |
-| Precision@10 |   0.9060 |   **0.9480** |
-| Recall@10    | 0.000332 | **0.000349** |
-| NDCG@10      |   0.8859 |   **0.8996** |
-| MRR@10       |   0.9542 |   **0.9542** |
-| MAP@10       |   0.9320 |   **0.9350** |
+```text
+Research Paper Recommender
+```
 
-The results show that the Transformer-based representation achieved higher Precision@10, Recall@10, and NDCG@10 than the TF-IDF baseline on the evaluation setup used in this project.
+MLflow makes it easier to keep the experimental results of **TF-IDF and Transformer** organized and compare their performance.
 
-## Experiment Tracking
+> **Current MLflow scope:** Experiment Tracking and comparison between TF-IDF and Transformer. Model Registry, MLflow Autologging, and Hyperparameter Tuning are not part of the current implementation.
 
-**MLflow** is used to track experiments and compare the performance of the recommendation approaches.
+---
 
-Tracked information includes:
-
-* Model/representation type
-* Dataset size
-* Evaluation metrics
-* Experiment runs
-
-The project uses MLflow to make model comparison and experiment tracking reproducible.
-
-## Project Structure
+# 📁 Project Structure
 
 ```text
 research-paper-recommender/
 │
 ├── data/
+│   ├── .gitkeep
 │   └── test_papers.csv
 │
 ├── models/
@@ -137,12 +320,32 @@ research-paper-recommender/
 ├── src/
 │   └── mlflow_tracking.py
 │
-├── requirements.txt
 ├── .gitignore
-└── README.md
+├── README.md
+└── requirements.txt
 ```
 
-## Installation
+Large datasets, generated embeddings, TF-IDF matrices, and local MLflow files are excluded from version control.
+
+---
+
+# 🛠️ Technologies
+
+* **Python**
+* **Pandas**
+* **NumPy**
+* **Scikit-learn**
+* **Sentence Transformers**
+* **Hugging Face**
+* **MLflow**
+* **FastAPI**
+* **Streamlit**
+* **Git**
+* **GitHub**
+
+---
+
+# ⚙️ Installation
 
 Clone the repository:
 
@@ -151,7 +354,7 @@ git clone https://github.com/mariam-rgp/research-paper-recommender.git
 cd research-paper-recommender
 ```
 
-Create and activate the Conda environment:
+Create the Conda environment:
 
 ```bash
 conda create -n paper_recommender python=3.11
@@ -164,76 +367,79 @@ Install the required dependencies:
 pip install -r requirements.txt
 ```
 
-## Usage
+---
 
-Run the notebooks in the following order:
+# ▶️ Project Workflow
+
+The notebooks follow the development process:
 
 ```text
 01_data_exploration.ipynb
-        ↓
+          ↓
 02_tfidf_baseline.ipynb
-        ↓
+          ↓
 03_transformer_embeddings.ipynb
-        ↓
+          ↓
 04_evaluation.ipynb
-        ↓
+          ↓
 05_recommendation_system.ipynb
 ```
 
-The notebooks cover:
+The resulting recommendation functionality is then integrated with:
 
-* Dataset exploration and preprocessing
-* TF-IDF baseline
-* Transformer-based embeddings
-* Model evaluation
-* Paper recommendation
-
-## MLflow
-
-To run the MLflow tracking script:
-
-```bash
-python src/mlflow_tracking.py
+```text
+Recommendation
+      ↓
+Translation
+      ↓
+FastAPI
+      ↓
+Streamlit
 ```
 
-Then start the MLflow UI:
+MLflow is used alongside the experimentation process to track the TF-IDF and Transformer experiments.
 
-```bash
-mlflow ui
-```
+---
 
-The MLflow tracking files are kept locally and are excluded from GitHub.
+# 📈 Key Features
 
-## Technologies
+* 📄 Research paper recommendation
+* 🔤 TF-IDF text representation
+* 🤗 Transformer-based semantic embeddings
+* 🔎 Cosine similarity
+* 📊 Ranking-based evaluation
+* 📈 Precision@K
+* 📈 Recall@K
+* 📈 NDCG@K
+* 📈 MRR@K
+* 📈 MAP@K
+* 🌐 Translation support
+* ⚡ FastAPI backend
+* 🖥️ Streamlit frontend
+* 📊 MLflow experiment tracking
+* 🔬 TF-IDF vs Transformer comparison
+* 🐙 Git/GitHub version control
 
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Hugging Face
-* Sentence Transformers
-* TF-IDF
-* Transformer Embeddings
-* Cosine Similarity
-* MLflow
-* Jupyter Notebook
-* Git
-* GitHub
+---
 
-## Future Improvements
+# 🔮 Future Improvements
 
-* Build a REST API for the recommendation system using FastAPI
-* Add a web interface for interactive recommendations
-* Experiment with additional embedding models
-* Add multilingual and Arabic research paper support
-* Explore hybrid recommendation approaches
-* Extend the system toward LLM/RAG-based research assistance
-* Deploy the recommendation service
+Possible future improvements include:
 
-## Author
+* Hybrid TF-IDF + Transformer recommendation
+* Fine-tuning the embedding model on research-paper data
+* More advanced semantic search
+* Re-ranking using cross-encoder models
+* Improved multilingual search
+* User feedback and personalized recommendations
+* Deployment of the FastAPI and Streamlit applications
+* Automated testing and CI/CD
+* Integration with larger-scale vector databases
 
-**Mariam Ahmed**
+---
 
-Computer & Information Graduate | Data Science & NLP
+# 👩‍💻 Author
 
-GitHub: `https://github.com/mariam-rgp`
+
+
+GitHub: **mariam-rgp**
